@@ -11,8 +11,11 @@ class StarSystem
   end
 
   def get_planet_by_name(find_planet)
-    found_planet = @planets.find {|planet| planet.name == find_planet}
-    return found_planet
+    return @planets.find {|planet| planet.name == find_planet}
+  end
+
+  def get_largest_planet()
+    return @planets.max_by {|planet| planet.diameter}
   end
 
 end
