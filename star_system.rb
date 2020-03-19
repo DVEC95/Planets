@@ -40,8 +40,9 @@ class StarSystem
     return moons.reduce {|moon, sum| moon + sum}
   end
 
-  # def get_planet_names_sorted_by_increasing_distance_from_sun
-  #   return @planets.max_by {|planet| planet.distance_from_sun}
-  # end
+  def get_planet_names_sorted_by_increasing_distance_from_sun
+    planets_by_distance = @planets.sort_by {|planet| planet.distance_from_sun}
+    return planets_by_distance.map {|planet| planet.name}
+  end
 
 end
