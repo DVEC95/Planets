@@ -26,4 +26,17 @@ class StarSystem
     return @planets.select {|planet| planet.number_of_moons == 0}
   end
 
+  # def get_planets_with_more_moons(moons_number)
+  #   @planets.map {|planet| planet.number_of_moons > moons_number}
+  # end
+  #
+  # def get_number_of_planets_closer_than(distance)
+  #   return @planets.select {|planet| planet.distance_from_sun > distance}
+  # end
+
+  def get_total_number_of_moons()
+    moons = @planets.map {|planet| planet.number_of_moons}
+    return moons.reduce {|moon, sum| moon + sum}
+  end
+
 end
