@@ -31,9 +31,9 @@ class StarSystem
     return found_planets.map {|found_planet| found_planet.name}
   end
 
-  # def get_number_of_planets_closer_than(distance)
-  #   return @planets.count {|planet| planet.distance_from_sun < distance}
-  # end
+  def get_number_of_planets_closer_than(distance)
+    return @planets.count {|planet| planet.distance_from_sun < distance}
+  end
 
   def get_total_number_of_moons()
     moons = @planets.map {|planet| planet.number_of_moons}
