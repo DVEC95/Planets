@@ -56,12 +56,12 @@ class TestStarSystem < Minitest::Test
     assert_equal(expected_planets, result)
   end
 
-  # def test_get_names_of_planet_with_more_than_four_moons
-  #   expected_names = ["Jupiter", "Neptune", "Saturn", "Uranus"]
-  #   result = @solar_system.get_planets_with_more_moons(4)
-  #   assert_equal(expected_names, result)
-  # end
-  #
+  def test_get_names_of_planet_with_more_than_four_moons
+    expected_names = ["Jupiter", "Neptune", "Saturn", "Uranus"]
+    result = @solar_system.get_planets_with_more_moons(4)
+    assert_equal(expected_names, result)
+  end
+
   # def test_number_of_planets_less_than_1billion_km_from_sun
   #   result = @solar_system.get_number_of_planets_closer_than(1000)
   #   assert_equal(5, result)
@@ -78,7 +78,7 @@ class TestStarSystem < Minitest::Test
   #   expected_names = ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune", "Pluto"]
   #   assert_equal(expected_names, @solar_system.get_planet_names_sorted_by_increasing_distance_from_sun)
   # end
-  #
+
   # def test_planet_names_sorted_by_size_decreasing
   #   expected_names = ["Jupiter", "Saturn", "Uranus", "Neptune", "Earth", "Venus", "Mars", "Mercury", "Pluto"]
   #   assert_equal(expected_names, @solar_system.get_planet_names_sorted_by_size_decreasing)
