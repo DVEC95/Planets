@@ -22,4 +22,8 @@ class StarSystem
     return @planets.min_by {|planet| planet.diameter}
   end
 
+  def get_planets_with_no_moons()
+    return @planets.select {|planet| planet.number_of_moons == 0}
+  end
+
 end
